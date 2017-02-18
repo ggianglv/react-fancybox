@@ -1,6 +1,6 @@
 {
   "name": "react-fancybox",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Fancybox",
   "main": "lib/Fancybox.js",
   "author": "Giang Le",
