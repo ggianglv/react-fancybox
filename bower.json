@@ -1,0 +1,29 @@
+{
+  "name": "react-fancybox",
+  "version": "0.0.0",
+  "description": "Fancybox",
+  "main": "dist/react-fancybox.min.js",
+  "homepage": "https://github.com/iamgiang/react-fancybox",
+  "authors": [
+    "Giang Le"
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "react",
+    "react-component"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".editorconfig",
+    ".gitignore",
+    "package.json",
+    "src",
+    "node_modules",
+    "example",
+    "test"
+  ]
+}
