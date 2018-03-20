@@ -1,0 +1,28 @@
+{
+  "name": "react-fancybox",
+  "version": "0.2.1",
+  "main": "./lib/App.js",
+  "author": "Giang Le",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gianglevan94/react-fancybox.git"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "compile": "NODE_ENV=production babel src --out-dir lib --copy-files"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  },
+  "files": ["src", "lib"]
+}
