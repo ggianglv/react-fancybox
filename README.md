@@ -17,7 +17,7 @@ yarn add react-fancybox
 ## Usage
 
 ```
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ReactFancyBox from 'react-fancybox'
 import 'react-fancybox/lib/fancybox.css'
 
@@ -26,6 +26,7 @@ class App extends Component {
     return (
       <div className="App">
         <ReactFancyBox
+          thumbnail="https://loremflickr.com/320/240"
           image="https://www.w3schools.com/howto/img_forest.jpg"/>
       </div>
     );
