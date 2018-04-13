@@ -9,9 +9,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: 1;
 }
 
-.react-fancybox .thumbnail img{
+.react-fancybox .thumbnail img {
   max-width: 600px;
 }
 
@@ -19,6 +20,7 @@
   padding: 10px;
   background-color: white;
   border-radius: 4px;
+  position: relative;
 }
 
 .react-fancybox .box .image-box .caption {
@@ -27,12 +29,22 @@
   margin-top: 7px;
 }
 
-.fade-enter {
+.react-fancybox .fade-enter {
   animation: fadein 600ms;
 }
 
-.fade-leave {
+.react-fancybox .fade-leave {
   animation: fadeout 600ms;
+}
+
+.react-fancybox .close-btn {
+  background-color: white;
+  width: 25px;
+  border-radius: 50%;
+  height: 25px;
+  position: absolute;
+  right: -13px;
+  top: -13px;
 }
 
 @keyframes fadein {

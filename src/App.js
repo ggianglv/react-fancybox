@@ -1,6 +1,7 @@
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import PropTypes from 'prop-types'
-import React, {Component} from 'react'
+import React, { Component } from 'react'
+import closeImg from './close.svg'
 
 const TRANSITION_TIME = 0
 
@@ -16,10 +17,14 @@ class App extends Component {
     this.props.onOpen()
   }
 
-  close = (event) => {
+  handleClickBox = (event) => {
     if (this.box.contains(event.target)) {
       return
     }
+    this.close()
+  }
+
+  close = () => {
     this.setState({
       show: false
     })
@@ -46,8 +51,8 @@ class App extends Component {
     )
   }
 
-  render() {
-    const {image, caption, animation} = this.props
+  render () {
+    const {image, caption, animation, showCloseBtn} = this.props
 
     const imageStyle = {
       maxHeight: window.innerHeight * 0.7
@@ -63,8 +68,9 @@ class App extends Component {
           transitionLeaveTimeout={TRANSITION_TIME}>
           {this.state.show
             ? (
-              <div onClick={this.close} className="box">
+              <div onClick={this.handleClickBox} className="box">
                 <div ref={box => this.box = box} className="image-box">
+                  {showCloseBtn && <img onClick={this.close} className="close-btn" src={closeImg} alt="close"/>}
                   <img style={imageStyle} src={image} alt="original"/>
                   {caption && <div className="caption">{caption}</div>}
                 </div>
@@ -85,7 +91,8 @@ App.defaultProps = {
   caption: '',
   animation: 'fade',
   onOpen: () => {},
-  onClose: () => {}
+  onClose: () => {},
+  showCloseBtn: true,
 }
 
 App.propTypes = {
@@ -97,7 +104,8 @@ App.propTypes = {
   animation: PropTypes.string,
   animationTime: PropTypes.number,
   onOpen: PropTypes.func,
-  onClose: PropTypes.func
+  onClose: PropTypes.func,
+  showCloseBtn: PropTypes.bool,
 }
 
 export default App

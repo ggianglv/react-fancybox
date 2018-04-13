@@ -45,4 +45,5 @@ defaultThumbnailWidth: if you dont define thumbnail, this will use image to thum
 defaultThumbnailHeight: default heigh of thumbnail of you dont define
 onOpen: function call after show box
 onClose: function call after close box
+showCloseBtn: show close btn
 ```
